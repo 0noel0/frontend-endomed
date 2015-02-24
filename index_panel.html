@@ -161,8 +161,8 @@
                     <!-- open nav ul -->
                     <ul>
                         <li class="side-nav-item active">
-                            <a href="index.html">
-                                <i class="nav-item-icon icon ion-social-rss-outline"></i>
+                            <a href="index_panel.html">
+                                <i class="nav-item-icon icon glyphicon glyphicon-home"></i> <!-- El home -->
                                 Inicio
                             </a>
                         </li><!-- /coverage -->
@@ -430,7 +430,7 @@
                                     <b class="caret"></b>
                                 </button>
                             </div>
-                            <h3 class="app-title pull-left hidden-xs">Resumen Mensual <small>Oct 30 - Nov 29, 2015</small></h3>
+                            <h3 class="app-title pull-left hidden-xs">Resumen <small>Febrero</small></h3>
                         </div><!-- /app header -->
 
                         <!-- app body -->
@@ -444,7 +444,7 @@
                                             <i class="pbo-icon icon ion-ios7-plus-empty"></i>
                                         </div><!-- /pb-object -->
                                         <h3 class="pb-title ">
-                                            <span class="text-info">278</span> <small>Ventas</small>
+                                            <span class="text-info">278</span> <small>Nuevos</small>
                                         </h3><!-- /pb-title -->
                                         <span class="pb-watermark">
                                             <i class="icon ion-ios7-personadd-outline"></i>
@@ -458,7 +458,7 @@
                                             <i class="pbo-icon icon ion-ios7-arrow-thin-up"></i>
                                         </div><!-- /pb-object -->
                                         <h3 class="pb-title ">
-                                            <span class="text-success">433</span> <small>Cotizaciones</small>
+                                            <span class="text-success">433</span> <small>En Cola</small>
                                         </h3><!-- /pb-title -->
                                         <span class="pb-watermark">
                                             <i class="icon ion-ios7-star-outline"></i>
@@ -472,7 +472,7 @@
                                             <i class="pbo-icon icon ion-arrow-graph-up-right"></i>
                                         </div><!-- /pb-object -->
                                         <h3 class="pb-title ">
-                                            <span class="text-warning">382</span> <small>Pedidos</small>
+                                            <span class="text-warning">382</span> <small>En proceso</small>
                                         </h3><!-- /pb-title -->
                                         <span class="pb-watermark">
                                             <i class="icon ion-ios7-cart-outline"></i>
@@ -486,7 +486,7 @@
                                             <i class="pbo-icon icon ion-ios7-pricetag-outline"></i>
                                         </div><!-- /pb-object -->
                                         <h3 class="pb-title">
-                                            <span class="text-danger">$87,000</span> <small>Ingresos</small>
+                                            <span class="text-danger">8</span> <small>Incidencias</small>
                                         </h3><!-- /pb-title -->
                                         <span class="pb-watermark">
                                             <i class="icon ion-bag"></i>
@@ -497,38 +497,53 @@
                             
 
 
+ <!--                          Calendario              calendario          calendario -->
+                            <div class="magic-layout"> 
+                                 <div class="panel panel-default bordered-none magic-element width-2x">
+                                    <div class="panel-heading bg-wetasphalt bordered-none">
+                                        <div class="panel-icon"><i class="icon ion-ios7-calendar-outline"></i></div>
+                                        <div class="panel-actions">
+                                            <a id="clndr4-today" role="button" class="btn btn-xs btn-flat btn-default">Today</a>
+                                            <a role="button" class="btn btn-xs btn-flat btn-danger">Add</a>
+                                        </div><!-- /panel-actions -->
+                                        <h3 class="panel-title">Custom #2</h3>
+                                    </div><!-- /panel-heading -->
+                                    <div id="clndr4" class="mini-clndr border-pomegranate">
+                                        <script id="clndr4-template" type="text/template">
 
-                            <div class="magic-layout">
-                                <div class="panel panel-default magic-element">
-                                    <div class="panel-body-heading">
-                                        <h3 class="pb-title">
-                                            Detalles de Ingreso
-                                        </h3><!-- /pb-title -->
-                                    </div><!-- /panel-body-heading -->
-                                    <div class="kits-chart">
-                                        <div id="revenue-chart" class="chart"></div>
-                                    </div><!-- /kits-chart -->
-                                    
-                                
+                                        <div class="controls bg-pomegranate">
+                                            <div class="clndr-previous-button"><i class="icon ion-ios7-arrow-back"></i></div>
+                                            <div class="month"><%= month %></div>
+                                            <div class="clndr-next-button"><i class="icon ion-ios7-arrow-forward"></i></div>
+                                        </div>
+
+                                        <div class="days-container">
+                                          <div class="days">
+                                            <div class="headers bg-danger">
+                                              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                                            </div>
+                                            <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+                                          </div>
+                                          <div class="events">
+                                            <div class="headers">
+                                              <div class="x-button text-inverse"><i class="icon ion-close-round"></i></div>
+                                              <div class="event-header bg-danger">EVENTS</div>
+                                            </div>
+                                            <div class="events-list">
+                                              <% _.each(eventsThisMonth, function(event) { %>
+                                                <div class="event">
+                                                  <a href="<%= event.url %>"><%= moment(event.startDate).format('MMM D') %> to <%= moment(event.endDate).format('MMM D') %>: <%= event.title %></a>
+                                                </div>
+                                              <% }); %>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        </script>
+                                    </div><!-- /clndr -->
                                 </div><!-- /panel -->
 
-                                <div class="panel panel-default magic-element">
-                                    <div class="panel-body-heading">
-                                        <h3 class="pb-title">
-                                            Desgloce de ventas
-                                        </h3><!-- /pb-title -->
-                                    </div><!-- /panel-body-heading -->
-                                    <div class="kits-chart">
-                                        <div id="sales-chart" class="chart"></div>
-                                    </div><!-- /kits-chart -->
-                                    <div class="panel-body">
-                                        <div class="text-center">
-                                            <button type="button" class="btn btn-ion btn-sm btn-primary">local</button>
-                                            <button type="button" class="btn btn-ion btn-sm btn-success">por correo</button>
-                                            <button type="button" class="btn btn-ion btn-sm btn-danger">por pedido</button>
-                                            <button type="button" class="btn btn-ion btn-sm btn-warning">por visitas</button>
-                                        </div>
-                                    </div><!-- /panel-body -->
+                                <!-- /panel-body -->
                                 </div><!-- /panel -->
 
                                 <div class="panel panel-default magic-element">
@@ -1093,6 +1108,23 @@
     
     <!-- theme app main.js -->
     <script src="assets/app/js/main.js"></script>
+     <!-- jQuery, theme required for theme -->
+    <script src="assets/jquery/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- theme dependencies -->
+    <script src="assets/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/verge/verge.min.js"></script>
+    <script src="assets/moment/moment.min.js"></script>
+    <script src="assets/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/google-code-prettify/prettify.js"></script>
+
+        <!-- other dependencies -->
+        <script src="assets/underscore/underscore-min.js"></script>
+        <script src="assets/clndr/clndr.min.js"></script>
+    
+    <!-- theme app main.js -->
+    <script src="assets/app/js/main.js"></script>
     
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -1103,6 +1135,127 @@
       ga('create','UA-48454066-1');ga('send','pageview');
     </script>
         
+         <script type="text/javascript">
+    $(function(){
+        'use strict';
+
+        var currentMonth = moment().format('YYYY-MM');
+        var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+
+        var events = [
+            { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
+            { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+            { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+            { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+        ];
+
+        var multidayArray = [
+            { startDate: moment().format('YYYY-MM-') + '9', endDate: moment().format('YYYY-MM-') + '13', title: 'Multi day events' },
+            { startDate: moment().format('YYYY-MM-') + '25', endDate: moment().format('YYYY-MM-') + '27', title: 'Another long events' }
+        ];
+
+        // calendar 1
+        var clndr1 = $('#clndr1').clndr({
+            template: $('#clndr1-template').html()
+        });
+
+        // calendar 2
+        var clndr2 = $('#clndr2').clndr({
+            template: $('#clndr2-template').html(),
+            events: events,
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr2').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr2').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true
+        });
+
+        // calendar 3
+        var clndr3 = $('#clndr3').clndr({
+            template: $('#clndr3-template').html(),
+            events: events,
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr3').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr3').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr3').find('.day.event').addClass('text-success');
+                $('#clndr3').find('.day.today').addClass('circle');
+            }
+        });
+
+        // calendar 4
+        var clndr4 = $('#clndr4').clndr({
+            template: $('#clndr4-template').html(),
+            events: multidayArray,
+            multiDayEvents: {
+                startDate: 'startDate',
+                endDate: 'endDate'
+            },
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr4').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr4').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr4').find('.day.event').addClass('bg-cloud text-danger');
+                $('#clndr4').find('.day.today').addClass('bg-danger text-inverse');
+            }
+        });
+        $('#clndr4-today').on('click', function(){
+            clndr4.setYear(moment().format('YYYY'));
+            clndr4.setMonth(moment().format('MMMM'));
+        });
+
+        // calendar 5
+        var clndr5 = $('#clndr5').clndr({
+            template: $('#clndr5-template').html(),
+            events: multidayArray,
+            multiDayEvents: {
+                startDate: 'startDate',
+                endDate: 'endDate'
+            },
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr5').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr5').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr5').find('.day.event').addClass('bg-cloud');
+                $('#clndr5').find('.day.today').addClass('bg-silver circle');
+            }
+        });
+    })
+    </script>
     <script type="text/javascript">
     $(function () {
         
