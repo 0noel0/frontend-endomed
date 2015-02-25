@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
+    <title>Arsenal - Inventario</title>
+    
+    <!-- fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/app/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/app/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/app/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/app/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/app/ico/favico.png">
+    <link rel="shortcut icon" href="assets/app/ico/favico.ico">
+
+    <!-- theme fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- theme bootstrap stylesheets -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- theme dependencies stylesheets -->
+    <link href="assets/app/css/dependencies.css" rel="stylesheet" />
+
+    <!-- theme app main.css (this import of all custom css, you can use requirejs for optimizeCss or grunt to optimize them all) -->
+    <link href="assets/app/css/syrena-admin.css" rel="stylesheet" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- content wrapper to define fullpage or container -->
+    <!-- (recomended: dont change the id value) -->
+    <section id="wrapper" class="container">
+        <!-- define side left theme -->
+        <aside class="side-left">
+            <!-- side header -->
+            <div class="side-header">
+                <!-- place your brand (recomended: dont change the id value) -->
+                <!-- (recomended: dont change the id value) -->
+                <h1 id="brand" class="brand">
+                    <a href="index.html">
+                        <!-- <i class="icon ion-waterdrop"></i> -->
+                        <img src="assets/app/img/brand.png" alt="Brand">   <!-- 32px image logo -->
+                       GETracker
+                    </a>
+                </h1><!-- /brand -->
+
+                <!-- form search, remove class hide if you not place your brand -->
+                <!-- (recomended: dont change the id value) -->
+                <form id="smart-search" class="side-form hide" role="form">
+                    <input type="text" class="form-control" data-target=".side-wrapper" placeholder="Smart Finder">
+                </form><!-- /side wrapper -->
+            </div><!-- /side header -->
+
+            <!-- side body -->
+            <div class="side-body">
+                <!-- this you can place your search result with ajax -->
+                <div class="side-wrapper side-wrapper-large">
+                    <div class="side-wrapper-status lead">No result, please start typing!</div>
+                    <div class="side-wrapper-result">
+                        <!-- just sample result -->
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar1.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Post title <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar2.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Username <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar3.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Item name <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar4.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Other result <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar5.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Something else <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar1.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Post title <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar2.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Username <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+
+                        <div class="panel panel-default bordered-none no-radius">
+                            <a href="#" class="panel-body-heading full-line">
+                                <div class="pb-object pb-object-circle pb-object-sm">
+                                    <img src="assets/app/img/avatar3.png" alt="">
+                                </div><!-- /pb-object -->
+                                <h3 class="pb-title pb-title-sm">
+                                    Item name <small>Lorem ipsum dolor sit amet, consectetur</small>
+                                </h3><!-- /pb-title -->
+                            </a><!-- /panel-body-heading -->
+                        </div><!-- /panel -->
+                    </div><!-- /side-wrapper-result -->
+                </div><!-- /side wrapper -->
+
+                <!-- separate nav for ease development -->
+                <nav class="side-nav">
+                    <!-- open nav ul -->
+                    <ul>
+                        <li class="side-nav-item-heading">
+                                    <a href="#" class="side-nav-back">
+                                        
+                                        <strong>Menu Pedidos</strong>
+                                    </a>
+                                </li><!-- /header layouts child -->
+                                <li class="side-nav-item">
+                                    <a href="nuevo_pedido.html">
+                                        <i class="nav-item-icon icon ion-ios-plus-outline"></i>
+                                        Hacer Pedido
+                                    </a>
+                                </li><!-- /blank -->
+                                <li class="side-nav-item">
+                                    <a href="layout_static.html">
+                                        <i class="nav-item-icon icon ion-android-cancel"></i>
+                                        Cancelar Pedido
+                                    </a>
+                                </li><!-- /variation -->
+                                <li class="side-nav-item">
+                                    <a href="layout_variation.html">
+                                        <i class="nav-item-icon icon ion-clock"></i>
+                                        Historial Pedidos
+                                    </a>
+                                </li><!-- /variation -->
+                             
+                                
+                                </li><!-- /magic -->
+                       
+                    </ul><!-- /nav ul-->
+                </nav>
+
+            </div><!-- /side body -->
+        </aside><!-- /side left -->
+
+        <!-- define content theme, use data-swipe="true" to enable gesture event -->
+        <!-- (recomended: dont change the id value) -->
+        <section id="content" class="content">
+            <!-- define your content header here -->
+            <header class="content-header">
+                <!-- header actions -->
+                <div class="header-actions pull-right">
+                    <!-- (recomended: dont change the id value) -->
+                    
+
+                    <!-- (recomended: dont change the id value) -->
+                    <div class="btn-group">
+                       
+                        <ul class="dropdown-menu dropdown-extend pull-right" role="menu">
+                            <li class="dropdown-header">You have 3 new messages</li><!-- /dropdown-header -->
+                            <li class="notif-media">
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar11.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">Account Team <small>58 min</small></h3>
+                                    <p class="notif-text">Spread the Word & Earn!</p>
+                                </a><!-- /notif-item -->
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar5.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">Mahatma, me (6) <small>Wed</small></h3>
+                                    <p class="notif-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, officia</p>
+                                </a><!-- /notif-item -->
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar4.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">Wrapbootstrap <small>Tue</small></h3>
+                                    <p class="notif-text">Consectetur adipisicing elit. Sequi, pariatur vel eum porro quae! Eos!</p>
+                                </a><!-- /notif-item -->
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar6.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">Stilearning <small>Tue</small></h3>
+                                    <p class="notif-text">Approval for new design</p>
+                                </a><!-- /notif-item -->
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar9.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">janesmith@mail.com <small>Mon</small></h3>
+                                    <p class="notif-text">Consectetur adipisicing elit. Sequi, pariatur vel eum porro quae! Eos!</p>
+                                </a><!-- /notif-item -->
+                                <a class="notif-item" href="messages.html">
+                                    <div class="notif-img pull-left">
+                                        <img src="assets/app/img/avatar8.png" alt="" class="img-circle" />
+                                    </div>
+                                    <h3 class="notif-heading">Microsoft Customer Support <small>Mon</small></h3>
+                                    <p class="notif-text">Thanks for ordering Windows 8 (order #WD12345678)</p>
+                                </a><!-- /notif-item -->
+                            </li><!-- /dropdown-alert -->
+                            <li class="dropdown-footer">
+                                <a class="view-all" tabindex="-1" href="messages.html">
+                                    <i class="icon ion-ios7-arrow-thin-right pull-right"></i> See all messages
+                                </a>
+                            </li><!-- /dropdown-footer -->
+                        </ul><!-- /dropdown-extend -->
+                    </div><!-- /btn-group new messages -->
+
+                    <!-- (recomended: dont change the id value) -->
+                    <div class="btn-group">
+                        <a id="users-setting" class="btn btn-icon data-toggle" data-toggle="dropdown" role="button">
+                            <i class="icon ion-person"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-extend pull-right" role="menu">
+                            <li class="dropdown-profile">
+                                <div class="dp-cover">
+                                    <img class="img-bg" src="assets/app/img/cover-blur.jpg" alt="">
+                                    <a class="img-avatar" href="page_profile.html">
+                                        <img class="img-circle" src="assets/app/img/avatar4.png" alt="">
+                                    </a>
+                                    <div class="dp-details">Juan Perez - Inventario</div>
+                                </div>
+                            </li>
+                            <li>
+                               
+                            </li>
+                            <li class="dropdown-footer">
+                                <div class="clearfix">
+                                    <a href="page_signin.html" class="btn btn-sm btn-default pull-right">Salir</a>
+                                    <a href="page_profile.html" class="btn btn-sm btn-default pull-left">Config</a>
+                                </div>
+                            </li><!-- /dropdown-footer -->
+                        </ul><!-- /dropdown-extend -->
+                    </div><!-- /btn-group setting -->
+
+                    <!-- (recomended: dont change the id value) -->
+                   
+                </div><!-- /header actions -->
+
+                <!-- header actions -->
+                <div class="header-actions pull-left">
+                    <!-- (recomended: dont change the id value) -->
+                    <button id="toggle-content" class="btn btn-icon" type="button"><i class="icon ion-navicon-round"></i></button>
+                    <!-- (recomended: dont change the id value) -->
+                  
+                </div><!-- /header actions -->
+
+                <!-- your Awesome App title -->
+                <h1 class="content-title">Arsenal - Inventario</h1>
+            </header><!-- /side left -->
+            
+
+            <!-- define content row -->
+            <div class="content-spliter">
+                <!-- define your awesome apps here -->
+                <!-- (recomended: dont change the id value) -->
+                <!-- CALENDAROPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP-->
+               
+
+                 <div class="transition-layout content-spliter" id="layout-1">
+                                <div class="box content-spliter" style="margin:0">
+                                    <h1 class="box-heading">NUEVO PEDIDO</h1>
+                                    <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, deleniti soluta quos provident recusandae ratione odit inventore molestias cumque nam! Blanditiis, rem, vitae perspiciatis optio consectetur non distinctio corporis dolore deleniti porro explicabo iste architecto numquam earum tempore maiores repellat sed inventore recusandae dignissimos culpa officia voluptatum harum suscipit ipsam reprehenderit aspernatur dolor iusto quae dolorum laudantium ducimus ex aliquid maxime odit assumenda neque quidem nam cum a quam nesciunt temporibus incidunt vero aliquam quibusdam? Dolorum, sequi, quaerat eos dolores culpa quos cum saepe debitis id explicabo ad odit vitae voluptates sunt accusantium natus a. Quam, praesentium similique quia sint quis quisquam deleniti vel atque modi cumque! Sit, tempora, optio, ipsum, atque fugit quia vel accusantium nulla ratione adipisci quo.</p>
+                                </div>
+                            </div><!-- /transition layout -->
+
+                            <div class="transition-layout" id="layout-2">
+                                <div class="box bg-turquoise">
+                                    <h2 class="box-heading">Layout #2</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, deleniti soluta quos provident recusandae ratione odit inventore molestias cumque nam! Blanditiis, rem, vitae perspiciatis optio consectetur non distinctio corporis dolore deleniti porro explicabo iste architecto numquam earum tempore maiores repellat sed inventore recusandae dignissimos culpa officia voluptatum harum suscipit ipsam reprehenderit aspernatur dolor iusto quae dolorum laudantium ducimus ex aliquid maxime odit assumenda neque quidem nam cum a quam nesciunt temporibus incidunt vero aliquam quibusdam? Dolorum, sequi, quaerat eos dolores culpa quos cum saepe debitis id explicabo ad odit vitae voluptates sunt accusantium natus a. Quam, praesentium similique quia sint quis quisquam deleniti vel atque modi cumque! Sit, tempora, optio, ipsum, atque fugit quia vel accusantium nulla ratione adipisci quo.</p>
+                                </div>
+                            </div><!-- /transition layout -->
+
+                            <div class="transition-layout" id="layout-3">
+                                <div class="box bg-alizarin">
+                                    <h2 class="box-heading">Layout #3</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, deleniti soluta quos provident recusandae ratione odit inventore molestias cumque nam! Blanditiis, rem, vitae perspiciatis optio consectetur non distinctio corporis dolore deleniti porro explicabo iste architecto numquam earum tempore maiores repellat sed inventore recusandae dignissimos culpa officia voluptatum harum suscipit ipsam reprehenderit aspernatur dolor iusto quae dolorum laudantium ducimus ex aliquid maxime odit assumenda neque quidem nam cum a quam nesciunt temporibus incidunt vero aliquam quibusdam? Dolorum, sequi, quaerat eos dolores culpa quos cum saepe debitis id explicabo ad odit vitae voluptates sunt accusantium natus a. Quam, praesentium similique quia sint quis quisquam deleniti vel atque modi cumque! Sit, tempora, optio, ipsum, atque fugit quia vel accusantium nulla ratione adipisci quo.</p>
+                                </div>
+                            </div><!-- /transition layout -->
+                        </div><!-- /app body -->
+            </div>
+           
+    </section><!-- /wrapper -->
+
+    
+
+
+    <!-- jQuery, theme required for theme -->
+    <script src="assets/jquery/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- theme dependencies -->
+    <script src="assets/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/verge/verge.min.js"></script>
+    <script src="assets/moment/moment.min.js"></script>
+    <script src="assets/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/google-code-prettify/prettify.js"></script>
+        
+        <!-- other dependencies -->
+        <script src="assets/jquery-icheck/jquery.icheck.min.js"></script>
+        <script src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/morris/morris.min.js"></script>
+        <script src="assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+        <script src="assets/select2/select2.min.js"></script>
+        <script src="assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    
+    <!-- theme app main.js -->
+    <script src="assets/app/js/main.js"></script>
+    
+   
+  </body>
+</html>
