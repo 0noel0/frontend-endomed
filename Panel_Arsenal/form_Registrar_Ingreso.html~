@@ -770,14 +770,14 @@
                                                 </div>
                                             </div><!-- /form-group -->
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="inputMultiple">Accesorios devueltos</label>
+                                                <label class="col-sm-2 control-label" for="inputMultiple">Accesorios</label>
                                                 <div class="col-sm-10">
                                                     <select class="form-control" id="inputMultiple" multiple>
                                                         <option>1 Placa de bloqueo 3.5 para calcáneo derecha XS L64 acero</option>
                                                         <option>2 Placa de bloqueo 3.5 para calcáneo, derecha, longitud 69 mm, acero </option>
-                                                        <option>3 Placa de bloqueo 3.5 para calcáneo, izquierda, longitud 69 mm, acero </option>
-                                                        <option>4 Placa de bloqueo 3.5 para calcáneo, derecha, longitud 76 mm, acero </option>
-                                                        <option>5Placa de bloqueo 3.5 para calcáneo, izquierda, longitud 76 mm, acero </option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
                                                     </select>
                                                 </div>
                                             </div><!-- /form-group -->
