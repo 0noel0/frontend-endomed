@@ -187,13 +187,13 @@
                                     </a>
                                 </li><!-- /blank -->
                                 <li class="side-nav-item">
-                                    <a href="layout_static.html">
+                                   <a href="cancelar_pedido.html">
                                         <i class="nav-item-icon icon ion-android-cancel"></i>
                                         Cancelar Pedido
                                     </a>
                                 </li><!-- /variation -->
                                 <li class="side-nav-item">
-                                    <a href="layout_variation.html">
+                                   <a href="historial_pedido.html">
                                         <i class="nav-item-icon icon ion-clock"></i>
                                         Historial Pedidos
                                     </a>
