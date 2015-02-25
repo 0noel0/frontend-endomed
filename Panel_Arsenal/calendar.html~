@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
+    <title>Pedidos en cola</title>
+    
+    <!-- fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/app/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/app/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/app/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/app/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/app/ico/favico.png">
+    <link rel="shortcut icon" href="assets/app/ico/favico.ico">
+
+    <!-- theme fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- theme bootstrap stylesheets -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- theme dependencies stylesheets -->
+    <link href="assets/app/css/dependencies.css" rel="stylesheet" />
+
+    <!-- theme app main.css (this import of all custom css, you can use requirejs for optimizeCss or grunt to optimize them all) -->
+    <link href="assets/app/css/syrena-admin.css" rel="stylesheet" />
+    
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- content wrapper to define fullpage or container -->
+    <!-- (recomended: dont change the id value) -->
+    <section id="wrapper" class="container">
+        <!-- define side left theme -->
+        <aside class="side-left">
+            <!-- side header -->
+            <div class="side-header">
+                <!-- place your brand (recomended: dont change the id value) -->
+                <!-- (recomended: dont change the id value) -->
+                <h1 id="brand" class="brand">
+                    <a href="index.html">
+                        <!-- <i class="icon ion-waterdrop"></i> -->
+                        <img src="assets/app/img/brand.png" alt="Brand">   <!-- 32px image logo -->
+                        Arsenal
+                    </a>
+                </h1><!-- /brand -->
+            </div><!-- /side header -->
+
+            <!-- side body -->
+            <div class="side-body">
+                <!-- separate nav for ease development -->
+                <nav class="side-nav">
+                    <!-- open nav ul -->
+                    <ul>
+                        <li class="side-nav-item-heading">
+                            <a href="index.html">
+                                <i class="nav-item-caret"></i>
+                                Regresar a inicio
+                            </a>
+                        </li><!-- /dashboard -->
+                        <li class="side-nav-item">
+                            <a href="panel_nuevos_pedidos.html">
+                                <i class="nav-item-icon icon ion-ios7-email-outline"></i>
+                                Nuevos 
+                            </a>
+                        </li><!-- /inbox -->
+                        <li class="side-nav-item">
+                            <a href="panel_colas_pedidos.html">
+                                <i class="nav-item-icon icon ion-ios-timer-outline"></i>
+                                En Cola
+                            </a>
+                        </li><!-- /inbox -->
+                        <li class="side-nav-item">
+                            <a href="panel_proceso_pedidos.html">
+                                <i class="nav-item-icon icon ion-ios-loop"></i>
+                                en Proceso
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="calendar.html">
+                                <i class="nav-item-icon icon ion-ios-calendar-outline"></i>
+                                Calendario
+                            </a>
+                        </li><!-- /inbox -->
+                       <!-- /inbox -->
+                    </ul><!-- /nav-ul -->
+                </nav><!-- /nav -->
+
+            </div><!-- /side body -->
+        </aside><!-- /side left -->
+
+        <!-- define content theme, use data-swipe="true" to enable gesture event -->
+        <!-- (recomended: dont change the id value) -->
+        <section id="content" class="content">
+            <!-- define content row -->
+            <div class="content-spliter">
+                <div class="message">
+                    <div class="message-content">
+                        <div class="message-content-heading">
+                            <button id="toggle-content" class="btn btn-icon pull-left" type="button">
+                                <i class="icon ion-navicon text-primary"></i>
+                            </button>
+                            <a class="btn btn-icon pull-right view-sm" role="button" title="Compose" style="top:4px">
+                                <i class="icon ion-ios7-plus-outline text-primary"></i>
+                            </a><!-- only use on small phone viewport -->
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown">
+                                    <i class="icon ion-ios7-arrow-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Marcar como leido</a></li>
+                                    <li><a href="#">Marcar como no leido</a></li>
+                                    <li><a href="#">Mover a</a></li>
+                                    <li><a href="#">otro...</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Borrados</a></li>
+                                </ul>
+                            </div>
+                           
+
+                        
+                            
+                                <section>
+				     <div class="app-body">
+                            
+                            <!-- app content here -->
+                            <div class="magic-layout"> 
+                                 <div class="panel panel-default bordered-none magic-element width-2x">
+                                    <div class="panel-heading bg-wetasphalt bordered-none">
+                                        <div class="panel-icon"><i class="icon ion-ios7-calendar-outline"></i></div>
+                                        <div class="panel-actions">
+                                            <a id="clndr4-today" role="button" class="btn btn-xs btn-flat btn-default">Today</a>
+                                            <a role="button" class="btn btn-xs btn-flat btn-danger">Add</a>
+                                        </div><!-- /panel-actions -->
+                                        <h3 class="panel-title">Custom #2</h3>
+                                    </div><!-- /panel-heading -->
+                                    <div id="clndr4" class="mini-clndr border-pomegranate">
+                                        <script id="clndr4-template" type="text/template">
+
+                                        <div class="controls bg-pomegranate">
+                                            <div class="clndr-previous-button"><i class="icon ion-ios7-arrow-back"></i></div>
+                                            <div class="month"><%= month %></div>
+                                            <div class="clndr-next-button"><i class="icon ion-ios7-arrow-forward"></i></div>
+                                        </div>
+
+                                        <div class="days-container">
+                                          <div class="days">
+                                            <div class="headers bg-danger">
+                                              <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                                            </div>
+                                            <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+                                          </div>
+                                          <div class="events">
+                                            <div class="headers">
+                                              <div class="x-button text-inverse"><i class="icon ion-close-round"></i></div>
+                                              <div class="event-header bg-danger">EVENTS</div>
+                                            </div>
+                                            <div class="events-list">
+                                              <% _.each(eventsThisMonth, function(event) { %>
+                                                <div class="event">
+                                                  <a href="<%= event.url %>"><%= moment(event.startDate).format('MMM D') %> to <%= moment(event.endDate).format('MMM D') %>: <%= event.title %></a>
+                                                </div>
+                                              <% }); %>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        </script>
+                                    </div><!-- /clndr -->
+                                </div><!-- /panel -->
+
+                                <!-- /panel-body -->
+                                </div><!-- /panel -->
+
+                                <div class="panel panel-default magic-element">
+                                    <div id="items-chart" class="chart" style="height:225px"></div>
+                                </div><!-- /panel --><!-- /message -->
+            </div><!-- /content spliter -->
+
+        </section><!-- /content -->
+    </section><!--fin de la vista principal -->
+
+    
+
+
+    <!-- jQuery, theme required for theme -->
+    <script src="assets/jquery/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- theme dependencies -->
+    <script src="assets/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/verge/verge.min.js"></script>
+    <script src="assets/moment/moment.min.js"></script>
+    <script src="assets/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/google-code-prettify/prettify.js"></script>
+        
+        <!-- other dependencies -->
+        <script src="assets/jquery-icheck/jquery.icheck.min.js"></script>
+    
+    <!-- theme app main.js -->
+    <script src="assets/app/js/main.js"></script>
+    
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-48454066-1');ga('send','pageview');
+    </script>
+    
+
+    <!-- jQuery, theme required for theme -->
+    <script src="assets/jquery/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- theme dependencies -->
+    <script src="assets/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/verge/verge.min.js"></script>
+    <script src="assets/moment/moment.min.js"></script>
+    <script src="assets/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/google-code-prettify/prettify.js"></script>
+        
+        <!-- other dependencies -->
+        <script src="assets/jquery-icheck/jquery.icheck.min.js"></script>
+        <script src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/morris/morris.min.js"></script>
+        <script src="assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+        <script src="assets/select2/select2.min.js"></script>
+        <script src="assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    
+    <!-- theme app main.js -->
+    <script src="assets/app/js/main.js"></script>
+     <!-- jQuery, theme required for theme -->
+    <script src="assets/jquery/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- theme dependencies -->
+    <script src="assets/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/verge/verge.min.js"></script>
+    <script src="assets/moment/moment.min.js"></script>
+    <script src="assets/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/google-code-prettify/prettify.js"></script>
+
+        <!-- other dependencies -->
+        <script src="assets/underscore/underscore-min.js"></script>
+        <script src="assets/clndr/clndr.min.js"></script>
+    
+    <!-- theme app main.js -->
+    <script src="assets/app/js/main.js"></script>
+    
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-48454066-1');ga('send','pageview');
+    </script>
+        
+         <script type="text/javascript">
+    $(function(){
+        'use strict';
+
+        var currentMonth = moment().format('YYYY-MM');
+        var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+
+        var events = [
+            { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
+            { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+            { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+            { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+        ];
+
+        var multidayArray = [
+            { startDate: moment().format('YYYY-MM-') + '9', endDate: moment().format('YYYY-MM-') + '13', title: 'Multi day events' },
+            { startDate: moment().format('YYYY-MM-') + '25', endDate: moment().format('YYYY-MM-') + '27', title: 'Another long events' }
+        ];
+
+        // calendar 1
+        var clndr1 = $('#clndr1').clndr({
+            template: $('#clndr1-template').html()
+        });
+
+        // calendar 2
+        var clndr2 = $('#clndr2').clndr({
+            template: $('#clndr2-template').html(),
+            events: events,
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr2').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr2').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true
+        });
+
+        // calendar 3
+        var clndr3 = $('#clndr3').clndr({
+            template: $('#clndr3-template').html(),
+            events: events,
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr3').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr3').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr3').find('.day.event').addClass('text-success');
+                $('#clndr3').find('.day.today').addClass('circle');
+            }
+        });
+
+        // calendar 4
+        var clndr4 = $('#clndr4').clndr({
+            template: $('#clndr4-template').html(),
+            events: multidayArray,
+            multiDayEvents: {
+                startDate: 'startDate',
+                endDate: 'endDate'
+            },
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr4').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr4').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr4').find('.day.event').addClass('bg-cloud text-danger');
+                $('#clndr4').find('.day.today').addClass('bg-danger text-inverse');
+            }
+        });
+        $('#clndr4-today').on('click', function(){
+            clndr4.setYear(moment().format('YYYY'));
+            clndr4.setMonth(moment().format('MMMM'));
+        });
+
+        // calendar 5
+        var clndr5 = $('#clndr5').clndr({
+            template: $('#clndr5-template').html(),
+            events: multidayArray,
+            multiDayEvents: {
+                startDate: 'startDate',
+                endDate: 'endDate'
+            },
+            clickEvents: {
+                click: function(target) {
+                    if(target.events.length) {
+                        var daysContainer = $('#clndr5').find('.days-container');
+                        daysContainer.toggleClass('show-events', true);
+                        $('#clndr5').find('.x-button').click( function() {
+                            daysContainer.toggleClass('show-events', false);
+                        });
+                    }
+                }
+            },
+            adjacentDaysChangeMonth: true,
+            doneRendering: function() {
+                $('#clndr5').find('.day.event').addClass('bg-cloud');
+                $('#clndr5').find('.day.today').addClass('bg-silver circle');
+            }
+        });
+    })
+    </script>
+    <script type="text/javascript">
+    $(function () {
+        
+        // date range picker
+        $('#dashboard-range').daterangepicker(
+            {
+              ranges: {
+                 'Today': [moment(), moment()],
+                 'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                 'Last 7 Days': [moment().subtract('days', 6), moment()],
+                 'Last 30 Days': [moment().subtract('days', 29), moment()],
+                 'This Month': [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+              },
+              startDate: moment().subtract('days', 6),
+              endDate: moment()
+            },
+            function(start, end) {
+                $('#dashboard-range .text-date').text(start.format('MMM D, YYYY') + ' - ' + end.format('MMM D, YYYY'));
+            }
+        );
+
+
+        
+        // charts
+        // chart revenue
+        var data1 = [
+            {dates: '2013-10-30', sales: 236},
+            {dates: '2013-10-31', sales: 137},
+            {dates: '2013-11-01', sales: 275},
+            {dates: '2013-11-02', sales: 380},
+            {dates: '2013-11-03', sales: 655},
+            {dates: '2013-11-04', sales: 571}
+        ],
+        revenueChart = Morris.Line({
+            element: 'revenue-chart',
+            data: data1,
+            lineColors: ['#3498db'],
+            gridTextColor: '#34495e',
+            pointFillColors: ['#3498db'],
+            xkey: 'dates',
+            ykeys: ['sales'],
+            labels: ['Sales'],
+            barRatio: 0.4,
+            hideHover: 'auto'
+        }),
+        salesChart = Morris.Donut({
+            element: 'sales-chart',
+            data: [
+                {label: 'Pedidos', value: 25 },
+                {label: 'En local', value: 40 },
+                {label: 'Ordenes por Email', value: 25 },
+                {label: 'Visita', value: 10 }
+            ],
+            colors: ['#f39c12', '#3498db', '#2ecc71', '#e74c3c'],
+            gridTextColor: '#3498db',
+            formatter: function (y) { return y + "%" }
+        }),
+        data_items = [
+            {themes: 'Tipo1', purchase: 136},
+            {themes: 'Tipo2', purchase: 137},
+            {themes: 'Tipo3', purchase: 675},
+            {themes: 'Tipo4', purchase: 380},
+            {themes: 'Tipo5', purchase: 655},
+            {themes: 'Tipo6', purchase: 1571}
+        ],
+        itemsChart = Morris.Bar({
+            element: 'items-chart',
+            data: data_items,
+            barColors: ['#3498db'],
+            gridTextColor: '#34495e',
+            xkey: 'themes',
+            ykeys: ['purchase'],
+            labels: ['Purchase'],
+            barRatio: 0.4,
+            xLabelAngle: 30,
+            hideHover: 'auto'
+        });
+
+        // update data on content or window resize
+        var update = function(){
+            revenueChart.redraw();
+            salesChart.redraw();
+            itemsChart.redraw();
+        }
+
+        // handle chart responsive on toggle .content
+        $(window).on('resize', function(){
+            update();
+        })
+        $('#toggle-aside').on('click', function(){
+            // update chart after transition finished
+            $("#content").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                update();
+                $(this).unbind();
+            });
+        })
+        $('#toggle-content').on('click', function(){
+            update();
+        })
+        // end chart
+
+
+
+        // todo list
+        $('.icheck').iCheck({
+            checkboxClass: 'icheckbox_flat-green',
+            radioClass: 'iradio_flat-green',
+            increaseArea: '20%' // optional
+        }).on('ifChanged', function(){
+            var $this = $(this),
+                todo = $(this).parent().parent().parent();
+
+            todo.toggleClass('todo-marked');
+            todo.find('.label').toggleClass('label-success');
+        });
+        
+    
+    <script type="text/javascript">
+    $(function() {
+        'use strict';
+
+        // toggle important state
+        $('.mc-group-item').on('click', function(e){
+            e.preventDefault()
+
+            $('.mc-group-item').removeClass('active');
+            $(this).addClass('active');
+            $('.message-preview').addClass('open');
+        })
+
+        // back to show mc-group, only for small phone viewport
+        $('.back-to-mc-group').on('click', function(){
+            $('.message-preview').removeClass('open');
+        })
+        
+        // toggle important state
+        $('.mcgi-star').on('click', function(e){
+            e.preventDefault();
+
+            $(this).toggleClass('important');
+        })
+        // end mark as important stat
+
+        // message content checker
+        $('.icheck').iCheck({
+            checkboxClass: 'icheckbox_minimal-blue',
+            radioClass: 'iradio_minimal-blue',
+        });
+
+        // checked all state
+        $('[name="mcgi-check-all"]').on('ifChecked', function(){
+            $('[name="mcgi-checkbox"]').iCheck('check');
+        })
+        .on('ifUnchecked', function(){
+            $('[name="mcgi-checkbox"]').iCheck('uncheck');
+        });
+
+        // single checked state
+        $('[name="mcgi-checkbox"]').on('ifToggled', function(e){
+            var isAnyChecked = $('[name="mcgi-checkbox"]:checked').length,
+                msg_item = $(this).parent().parent().parent();
+
+            msg_item.toggleClass('selected');
+                
+            if (!isAnyChecked) {
+                $('.mcgi-checker').removeClass('checked');
+                $('[name="mcgi-check-all"]').iCheck('uncheck');
+            }
+            else{
+                $('.mcgi-checker').addClass('checked');
+            };
+        });
+        // end message content checker
+    })
+    </script>
+  </body>
+</html>

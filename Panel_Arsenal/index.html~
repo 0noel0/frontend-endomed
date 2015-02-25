@@ -182,42 +182,20 @@
                                     </a>
                                 </li><!-- /header layouts child -->
                                 <li class="side-nav-item">
-                                    <a href="form_Registrar_Ingreso.html">
-					<i class="nav-item-caret"></i>
-                                        <i class="nav-item-icon icon ion-ios-compose-outline"></i>
-                                        Resgistrar Ingreso
-                                    </a>
-				      <!-- resgistrando Ingresos -->
-				      <ul id="layouts" class="side-nav-child">
-					<li class="side-nav-item-heading">
-					  <a href="index.html" class="side-nav-back">
-					    <i class="nav-item-caret"></i>
-						Regresar al Inicio
-					  </a>
-					</li><!-- /header layouts child -->
-					<li class="side-nav-item">
-					  <a href="layout_blank.html">
-					    <i class="nav-item-icon icon ion-ios-compose-outline"></i>
-					      Validar Consumo
-					  </a>
-					</li><!-- /blank -->
-					<li class="side-nav-item">
-					  <a href="layout_static.html">
-					    <i class="nav-item-icon ion-ios-pulse"></i>
-					      Ingresar Esterilizado
-					  </a>
-					</li>
-				    </ul> <!-- Fin de registro de ingresos-->
-                                <!-- /blank -->
+                            <a href="form_Registrar_Ingreso.html">
+                                <i class="nav-item-icon icon ion-ios-compose-outline"></i>
+                                Registrar Ingreso 
+                            </a>
+                                  <!-- /blank -->
                                 <li class="side-nav-item">
-                                    <a href="layout_static.html">
+                                    <a href="form_status.html">
                                         <i class="nav-item-icon ion-ios-pulse"></i>
                                        Estado de Material
                                     </a>
                                 </li><!-- /variation -->
                                 <li class="side-nav-item">
-                                    <a href="layout_variation.html">
-                                        <i class="nav-item-icon icon ion-ios-bell-outline"></i>
+                                    <a href="form_bugs.html">
+                                        <i class="nav-item-icon icon ion-bug"></i>
                                         Insidencias
                                     </a>
                                 </li><!-- /variation -->
