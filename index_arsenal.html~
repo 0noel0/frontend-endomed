@@ -45,7 +45,7 @@
                 <!-- place your brand (recomended: dont change the id value) -->
                 <!-- (recomended: dont change the id value) -->
                 <h1 id="brand" class="brand">
-                    <a href="index_arsernal.html">
+                    <a href="index.html">
                         <!-- <i class="icon ion-waterdrop"></i> -->
                         <img src="assets/app/img/brand.png" alt="Brand">   <!-- 32px image logo -->
                        GETracker
@@ -161,7 +161,7 @@
                     <!-- open nav ul -->
                     <ul>
                         <li class="side-nav-item active">
-                            <a href="index_arsenal.html">
+                            <a href="index.html">
                                 <i class="nav-item-icon ion-home"></i>
                                 Inicio
                             </a>
@@ -187,13 +187,13 @@
                                     </a>
                                 </li><!-- /blank -->
                                 <li class="side-nav-item">
-                                    <a href="layout_static.html">
+                                   <a href="cancelar_pedido.html">
                                         <i class="nav-item-icon icon ion-android-cancel"></i>
                                         Cancelar Pedido
                                     </a>
                                 </li><!-- /variation -->
                                 <li class="side-nav-item">
-                                    <a href="layout_variation.html">
+                                   <a href="historial_pedido.html">
                                         <i class="nav-item-icon icon ion-clock"></i>
                                         Historial Pedidos
                                     </a>
@@ -212,7 +212,7 @@
                         </li><!-- /messages -->
 
                          <li class="side-nav-item">
-                            <a href="calendario_arsenal.html">
+                            <a href="messages.html">
                                 
                                 <i class="nav-item-icon icon ion-ios-calendar-outline"></i>
                                 Calendario
@@ -347,7 +347,7 @@
 
                  <div class="transition-layout content-spliter" id="layout-1">
                                 <div class="box content-spliter" style="margin:0">
-                                    <h1 class="box-heading">INICIO -INSTRUMENTISTAS</h1>
+                                    <h1 class="box-heading">INICIO ARSENAL</h1>
                                     <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, deleniti soluta quos provident recusandae ratione odit inventore molestias cumque nam! Blanditiis, rem, vitae perspiciatis optio consectetur non distinctio corporis dolore deleniti porro explicabo iste architecto numquam earum tempore maiores repellat sed inventore recusandae dignissimos culpa officia voluptatum harum suscipit ipsam reprehenderit aspernatur dolor iusto quae dolorum laudantium ducimus ex aliquid maxime odit assumenda neque quidem nam cum a quam nesciunt temporibus incidunt vero aliquam quibusdam? Dolorum, sequi, quaerat eos dolores culpa quos cum saepe debitis id explicabo ad odit vitae voluptates sunt accusantium natus a. Quam, praesentium similique quia sint quis quisquam deleniti vel atque modi cumque! Sit, tempora, optio, ipsum, atque fugit quia vel accusantium nulla ratione adipisci quo.</p>
                                 </div>
                             </div><!-- /transition layout -->

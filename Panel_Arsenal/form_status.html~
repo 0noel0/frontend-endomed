@@ -773,9 +773,9 @@
                                                 
                                                 <div class="label label-danger">09:30 am</div>
                                                 <div class="todo-text">Placa LCP 3.5 para Olecranon</div>
-                                               <span><button type="button" class="btn btn-success">Disponible</button>
-                                                <button type="button" class="btn btn-warning">Esterilizacion</button>
-                                                <button type="button" class="btn btn-danger">en Uso</button>
+                                               <span><button type="button" class="btn btn-success">Éxito</button>
+                                                <button type="button" class="btn btn-warning">Advertencia</button>
+                                                <button type="button" class="btn btn-danger">Peligro</button>
                                                 </span>
                                             </div>
                                         </li><!-- /list-group-item -->
@@ -785,10 +785,6 @@
                                                
                                                 <div class="label label-warning">Mañana</div>
                                                 <div class="todo-text">Placa LCP 3.5 para humero proximal PHILOS se le agrega complemento</div>
-                                            <span><button type="button" class="btn btn-success">Disponible</button>
-                                                <button type="button" class="btn btn-warning">Esterilizacion</button>
-                                                <button type="button" class="btn btn-danger">en Uso</button>
-                                                </span>
                                             </div>
                                         </li><!-- /list-group-item -->
 
@@ -797,10 +793,6 @@
                                                 
                                                 <div class="label label-warning">Mañana</div>
                                                 <div class="todo-text">Placas DCP de 4.5 semitubulares</div>
-                                                <span><button type="button" class="btn btn-success">Disponible</button>
-                                                <button type="button" class="btn btn-warning">Esterilizacion</button>
-                                                <button type="button" class="btn btn-danger">en Uso</button>
-                                                </span>
                                             </div>
                                         </li><!-- /list-group-item -->
 
@@ -809,10 +801,6 @@
                                                 
                                                 <div class="label label-primary">En una Semana</div>
                                                 <div class="todo-text">Placas en T y en L DCP de 4.5 Butres</div>
-                                                <span><button type="button" class="btn btn-success">Disponible</button>
-                                                <button type="button" class="btn btn-warning">Esterilizacion</button>
-                                                <button type="button" class="btn btn-danger">en Uso</button>
-                                                </span>
                                             </div>
                                         </li><!-- /list-group-item -->
 
@@ -821,10 +809,6 @@
                                                 
                                                 <div class="label label-primary">En una semana</div>
                                                 <div class="todo-text">Placas DCP de 3.5 rectas</div>
-                                                <span><button type="button" class="btn btn-success">Disponible</button>
-                                                <button type="button" class="btn btn-warning">Esterilizacion</button>
-                                                <button type="button" class="btn btn-danger">en Uso</button>
-                                                </span>
                                             </div>
                                         </li><!-- /list-group-item -->
                                     </ul><!-- /list-group -->
