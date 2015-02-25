@@ -477,105 +477,89 @@
 				     <div class="app-body">
                             
                             <!-- app content here -->
-                            <!-- invoice -->
-                            <div class="center-box center-block">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                        <div class="panel-body-heading bordered">
-                                            <h3 class="panel-body-title">Pedido Cod #247 <small>Sistemas Biomédicos, S.A. de C.V.</small></h3>
-                                        </div>
-                                        <div class="row invoice-desc">
-                                            <div class="col-md-4">
-                                                <p class="muted">From</p>
-                                                <p>Example Company</p>
-                                                <p>47 Address</p>
-                                                <p>Example, NY.80091</p>
-                                                <p>invoice@mail.com</p>
+                            <div class="panel panel-default magic-element">
+                                    <div class="panel-body-heading">
+                                        <div class="pb-object pb-object-circle">
+                                            <img src="assets/app/img/brand-md.png" alt="">
+                                        </div><!-- /pb-object -->
+                                        <h3 class="pb-title">
+                                            Pedidos En proceso
+                                            <small class="text-muted">Semana actual</small>
+                                        </h3><!-- /pb-title -->
+                                        <div class="pb-actions">
+                                            <!-- Single button -->
+                                            <div class="btn-group">
+                                                <a role="button" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
+                                                    <span class="icon ion-navicon"></span>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li><a href="#">New todo</a></li>
+                                                    <li><a href="#">Mark as progress</a></li>
+                                                    <li><a href="#">Something else</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Delete todo</a></li>
+                                                </ul>
                                             </div>
-                                            <div class="col-md-4">
-                                                <p class="muted">To</p>
-                                                <p>XYZ Corp</p>
-                                                <p>432 Main Street</p>
-                                                <p>San Francisco, CA 91234</p>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p>Invoice No. 247</p>
-                                                <p>Invoice Date. December 21, 2012</p>
-                                                <p>Payment Due. January 17, 2012</p>
-                                            </div>
-                                        </div>
+                                        </div><!-- /pb-actions -->
+                                        <span class="pb-watermark">
+                                            <i class="icon ion-clipboard"></i>
+                                        </span><!-- /pb-watermark -->
+                                    </div><!-- /panel-body-heading -->
 
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ITEM DESCRIPTIONS</th>
-                                                        <th>QTY</th>
-                                                        <th>PRICE</th>
-                                                        <th>TOTAL PRICE</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Lorem Ipsum</td>
-                                                        <td class="text-right">5.0</td>
-                                                        <td class="text-right">$4.00</td>
-                                                        <td class="text-right">$20.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nulla pellentesque</td>
-                                                        <td class="text-right">3.0</td>
-                                                        <td class="text-right">$5.00</td>
-                                                        <td class="text-right">$15.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Leo ornare lacinia</td>
-                                                        <td class="text-right">13.0</td>
-                                                        <td class="text-right">$2.00</td>
-                                                        <td class="text-right">$26.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Est arcu integer consectetuer</td>
-                                                        <td class="text-right">5.0</td>
-                                                        <td class="text-right">$5.00</td>
-                                                        <td class="text-right">$25.00</td>
-                                                    </tr>
-                                                </tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th colspan="4">Invoice Totals</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">Invoice Subtotal</td>
-                                                        <td class="text-right">$66.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">Invoice Discount</td>
-                                                        <td class="text-right">($4.00)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">Sales Tax  (8.5%)</td>
-                                                        <td class="text-right">$5.61</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="3">Total Due</td>
-                                                        <td class="text-right">USD $67.61</td>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/invoice-->
-                            
-                        </div><!-- /app body -->
-                    </div><!-- /content app -->
-                     <a class="btn btn-icon" role="button" title="Trash">
-                                    <i class="icon ion-ios7-trash text-primary"></i>
-                                </a>
-                                <button type="submit" class="btn btn-primary">Valdar</button>
-                                <button type="submit" class="btn btn-primary">En cola</button>
+                                    <!-- list group -->
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <div class="todo-list">
+                                                <div class="todo-checker">
+                                                    <input class="icheck" type="checkbox">
+                                                </div>
+                                                <div class="label label-danger">09:30 am</div>
+                                                <div class="todo-text">Dr. Jose - H. General ISSS</div>
+                                            </div>
+                                        </li><!-- /list-group-item -->
+
+                                        <li class="list-group-item">
+                                            <div class="todo-list">
+                                                <div class="todo-checker">
+                                                    <input class="icheck" type="checkbox">
+                                                </div>
+                                                <div class="label label-warning">Mañana</div>
+                                                <div class="todo-text">Dr. Miguel - H. Sn Rafael</div>
+                                            </div>
+                                        </li><!-- /list-group-item -->
+
+                                        <li class="list-group-item">
+                                            <div class="todo-list">
+                                                <div class="todo-checker">
+                                                    <input class="icheck" type="checkbox">
+                                                </div>
+                                                <div class="label label-warning">Mañana</div>
+                                                <div class="todo-text">Dr. Mario - H. Rosales</div>
+                                            </div>
+                                        </li><!-- /list-group-item -->
+
+                                        <li class="list-group-item">
+                                            <div class="todo-list">
+                                                <div class="todo-checker">
+                                                    <input class="icheck" type="checkbox">
+                                                </div>
+                                                <div class="label label-primary">En una Semana</div>
+                                                <div class="todo-text">Dr. Ricardo - H. Isss maternidad</div>
+                                            </div>
+                                        </li><!-- /list-group-item -->
+
+                                        <li class="list-group-item">
+                                            <div class="todo-list">
+                                                <div class="todo-checker">
+                                                    <input class="icheck" type="checkbox">
+                                                </div>
+                                                <div class="label label-primary">En una semana</div>
+                                                <div class="todo-text">Dr. Gerardo - H. amatepec</div>
+                                            </div>
+                                        </li><!-- /list-group-item -->
+                                    </ul><!-- /list-group -->
+                                </div><!-- /panel todo as user -->
+                            </div><!-- /magic-layout #2 -->
                             </div>
                  </section>
                                 
