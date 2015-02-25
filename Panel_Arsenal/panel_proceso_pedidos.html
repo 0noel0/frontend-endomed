@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
-    <title>Pedidos</title>
+    <title>Pedidos en cola</title>
     
     <!-- fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/app/ico/apple-touch-icon-144-precomposed.png">
@@ -50,7 +50,7 @@
                     <a href="index.html">
                         <!-- <i class="icon ion-waterdrop"></i> -->
                         <img src="assets/app/img/brand.png" alt="Brand">   <!-- 32px image logo -->
-                        GETracker
+                        Arsenal
                     </a>
                 </h1><!-- /brand -->
             </div><!-- /side header -->
@@ -68,25 +68,25 @@
                             </a>
                         </li><!-- /dashboard -->
                         <li class="side-nav-item">
-                            <a href="#">
+                            <a href="panel_nuevos_pedidos.html">
                                 <i class="nav-item-icon icon ion-ios7-email-outline"></i>
                                 Nuevos 
                             </a>
                         </li><!-- /inbox -->
                         <li class="side-nav-item">
-                            <a href="#">
+                            <a href="panel_colas_pedidos.html">
                                 <i class="nav-item-icon icon ion-ios-timer-outline"></i>
                                 En Cola
                             </a>
                         </li><!-- /inbox -->
                         <li class="side-nav-item">
-                            <a href="#">
+                            <a href="panel_proceso_pedidos.html">
                                 <i class="nav-item-icon icon ion-ios-loop"></i>
                                 en Proceso
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="#">
+                            <a href="calendar.html">
                                 <i class="nav-item-icon icon ion-ios-calendar-outline"></i>
                                 Calendario
                             </a>
@@ -460,106 +460,269 @@
                             </div><!-- /right preview actions -->
                         </div><!-- /message-preview-heading -->
 
-                        <div class="message-preview-content">
-                            <div class="mpc-details">
-                                
-                                <div class="mpc-avatar">
-                                    <img class="img-circle" src="assets/app/img/brand-md.png" alt=""/>
-                                </div>
-                                <h3 class="mpc-sender-name">Mr. Doe</h3>
-                                <div class="mpc-sender-mail">
-                                    <a href="#">thedoe@mail.com</a> to <a href="#">me</a>
-                                </div>
-                            </div>
-                            <h3 class="mpc-subject">Cirugía, H. General ISSS !</h3>
-                            <div class="mpc-msg">
+                        
+                            
                                 <section>
 				     <div class="app-body">
                             
                             <!-- app content here -->
                             <div class="panel panel-default magic-element">
-                                    <div class="panel-body-heading">
-                                        <div class="pb-object pb-object-circle">
-                                            <img src="assets/app/img/brand-md.png" alt="">
-                                        </div><!-- /pb-object -->
-                                        <h3 class="pb-title">
-                                            Pedidos En proceso
-                                            <small class="text-muted">Semana actual</small>
-                                        </h3><!-- /pb-title -->
-                                        <div class="pb-actions">
-                                            <!-- Single button -->
-                                            <div class="btn-group">
-                                                <a role="button" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
-                                                    <span class="icon ion-navicon"></span>
-                                                </a>
-                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                    <li><a href="#">New todo</a></li>
-                                                    <li><a href="#">Mark as progress</a></li>
-                                                    <li><a href="#">Something else</a></li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="#">Delete todo</a></li>
-                                                </ul>
-                                            </div>
-                                        </div><!-- /pb-actions -->
-                                        <span class="pb-watermark">
-                                            <i class="icon ion-clipboard"></i>
-                                        </span><!-- /pb-watermark -->
-                                    </div><!-- /panel-body-heading -->
+                                    <div class="panel-heading">
+                                        <ul class="nav nav-pills">
+                                            <li class="active">
+                                                <a href="#recent-orders" data-toggle="tab">Pedidos Recientes</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#recent-comments" data-toggle="tab">Incidencias Recientes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- tab-content -->
+                                    <div class="tab-content list-group">
+                                        <div class="tab-pane fade in active" id="recent-orders">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 3 materiales ($180)</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dr. Manuel</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 2Hrs</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="invoice" class="btn btn-default"><i class="icon ion-card"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
 
-                                    <!-- list group -->
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <div class="todo-list">
-                                                <div class="todo-checker">
-                                                    <input class="icheck" type="checkbox">
-                                                </div>
-                                                <div class="label label-danger">09:30 am</div>
-                                                <div class="todo-text">Dr. Jose - H. General ISSS</div>
-                                            </div>
-                                        </li><!-- /list-group-item -->
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 145 </h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dr. Hugo Lopez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 3 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="invoice" class="btn btn-default"><i class="icon ion-card"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
 
-                                        <li class="list-group-item">
-                                            <div class="todo-list">
-                                                <div class="todo-checker">
-                                                    <input class="icheck" type="checkbox">
-                                                </div>
-                                                <div class="label label-warning">Mañana</div>
-                                                <div class="todo-text">Dr. Miguel - H. Sn Rafael</div>
-                                            </div>
-                                        </li><!-- /list-group-item -->
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 453</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dra. Celina Chavez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 22 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="invoice" class="btn btn-default"><i class="icon ion-card"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane recent order -->
 
-                                        <li class="list-group-item">
-                                            <div class="todo-list">
-                                                <div class="todo-checker">
-                                                    <input class="icheck" type="checkbox">
-                                                </div>
-                                                <div class="label label-warning">Mañana</div>
-                                                <div class="todo-text">Dr. Mario - H. Rosales</div>
-                                            </div>
-                                        </li><!-- /list-group-item -->
+                                        <!-- group recent posts -->
+                                        <div class="tab-pane fade" id="recent-posts">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 345</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dr. Felipe Diaz</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 30 Minutos</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
 
-                                        <li class="list-group-item">
-                                            <div class="todo-list">
-                                                <div class="todo-checker">
-                                                    <input class="icheck" type="checkbox">
-                                                </div>
-                                                <div class="label label-primary">En una Semana</div>
-                                                <div class="todo-text">Dr. Ricardo - H. Isss maternidad</div>
-                                            </div>
-                                        </li><!-- /list-group-item -->
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Sexy UI Kits, so hard?</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Jupainah</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>3 hours ago</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
 
-                                        <li class="list-group-item">
-                                            <div class="todo-list">
-                                                <div class="todo-checker">
-                                                    <input class="icheck" type="checkbox">
-                                                </div>
-                                                <div class="label label-primary">En una semana</div>
-                                                <div class="todo-text">Dr. Gerardo - H. amatepec</div>
-                                            </div>
-                                        </li><!-- /list-group-item -->
-                                    </ul><!-- /list-group -->
-                                </div><!-- /panel todo as user -->
-                            </div><!-- /magic-layout #2 -->
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Make Your Design Keep Simple and Easy Read</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Layla Smith</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>22 hours ago</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane recent post -->
+
+                                        <!-- group recent comments -->
+                                        <div class="tab-pane fade" id="recent-comments">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, debitis, distinctio, eveniet quia at minima incidunt officia unde blanditiis delectus dolore nulla voluptatum nisi aspernatur rem labore deserunt porro nostrum.
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Juan Perez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 16 Minutos</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, perferendis, odit, quae fuga omnis sit maiores veritatis modi rerum quis est mollitia labore accusantium. Culpa, eos aliquam cum neque hic.
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Ramon Martinez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 3 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, eius, sed, repudiandae quos nulla voluptatum a quas eligendi eos at maxime numquam placeat voluptates perspiciatis debitis. Laudantium fugiat nam in?
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Celina Gomez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 22 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane -->
+                                    </div><!-- /list-group tab-content -->
+                                </div><!-- /panel recent reports -->
                             </div>
                  </section>
                                 

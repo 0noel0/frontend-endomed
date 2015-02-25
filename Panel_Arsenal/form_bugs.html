@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
-    <title>Ingresos</title>
+    <title>Ingresos Materiales</title>
     
     <!-- fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/app/ico/apple-touch-icon-144-precomposed.png">
@@ -25,6 +25,8 @@
 
     <!-- theme app main.css (this import of all custom css, you can use requirejs for optimizeCss or grunt to optimize them all) -->
     <link href="assets/app/css/syrena-admin.css" rel="stylesheet" />
+    
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +60,7 @@
                     <a href="index.html">
                         <!-- <i class="icon ion-waterdrop"></i> -->
                         <img src="assets/app/img/brand.png" alt="Brand">   <!-- 32px image logo -->
-                        Syrena
+                        Arsenal
                     </a>
                 </h1><!-- /brand -->
 
@@ -306,11 +308,10 @@
                             <!-- forms child -->
                             <ul id="forms" class="side-nav-child open">
                                 <li class="side-nav-item-heading">
-                                    <a href="#" class="side-nav-back">
-                                        <i class="nav-item-caret"></i>
-                                        Forms
-                                    </a>
-                                </li><!-- /header pages child -->
+                            <a href="index.html">
+                                <i class="nav-item-caret"></i>
+                                Regresar a inicio
+                                    </a> <!-- /header pages child -->
                                 <li class="side-nav-item active">
                                     <a href="form_elements.html">
                                         <i class="nav-item-icon icon ion-ios7-compose-outline"></i>
@@ -318,24 +319,18 @@
                                     </a>
                                 </li><!-- /form-element -->
                                 <li class="side-nav-item">
-                                    <a href="form_wizard.html">
-                                        <i class="nav-item-icon icon ion-ios7-compose-outline"></i>
-                                        Wizard & Validation
+                                    <a href="form_status.html">
+                                        <i class="nav-item-icon ion-ios-pulse"></i>
+                                       Estado de Material
                                     </a>
-                                </li><!-- /wizard&validation -->
+                                </li><!-- /variation -->
                                 <li class="side-nav-item">
-                                    <a href="form_wysiwyg.html">
-                                        <i class="nav-item-icon icon ion-ios7-compose-outline"></i>
-                                        Wysiwyg
+                                    <a href="form_bugs.html">
+                                        <i class="nav-item-icon icon ion-ios-bell-outline"></i>
+                                        Insidencias
                                     </a>
-                                </li><!-- /wysiwyg -->
-                                <li class="side-nav-item">
-                                    <a href="form_dropzone.html">
-                                        <span class="badge">New</span>
-                                        <i class="nav-item-icon icon ion-ios7-compose-outline"></i>
-                                        Dropzone
-                                    </a>
-                                </li><!-- /dropzone -->
+                                </li><!-- /variation -->
+                                
                             </ul><!-- /forms child -->
                         </li><!-- /forms -->
                         <li class="side-nav-item">
@@ -724,150 +719,265 @@
                     <!-- your app content -->
                     <div class="content-app fixed-header">
                         <!-- app header -->
-                        <div class="app-header">
-                            <div class="pull-right">
-                                <a class="btn btn-default" role="button">Left</a>
-                                <a class="btn btn-default" role="button">Midle</a>
-                                <a class="btn btn-default" role="button">Right</a>
-                            </div>
-                            <ol class="breadcrumb bg-none pull-left hide-xs">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Library</a></li>
-                                <li class="active">Data</li>
-                            </ol>
-                            <!-- <h3 class="app-title">Drop App Modules</h3> -->
-                        </div><!-- /app header -->
+                        <!-- /app header -->
 
                         <!-- app body -->
                         <div class="app-body">
                             
-                            <!-- app content here -->
-                            <div class="magic-layout">
-                                <div class="box magic-element width-full">
-                                    <h2 class="box-heading">
-                                        <div class="btn-group pull-right">
-                                            <a href="#" role="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                                <i class="icon ion-ios7-arrow-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a class="form-theme" data-toggle="default" href="#">Default</a></li>
-                                                <li><a class="form-theme" data-toggle="flat" href="#">Flat</a></li>
-                                                <li><a class="form-theme" data-toggle="ion" href="#">Ion</a></li>
-                                                <li class="divider"></li>
-                                                <li><a class="form-theme" data-toggle="flat-ion" href="#">Flat & Ion</a></li>
-                                                <li class="divider"></li>
-                                                <li><a class="form-theme" data-toggle="disabled-fieldset" href="#">Toggle Disable</a></li>
-                                            </ul>
-                                        </div>
-                                        Input Fields
-                                    </h2>
-                                    <form class="form-horizontal" role="form">
-                                        <fieldset>
-                                            <!-- /form-group -->
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="inputSelect">Selects</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" id="inputSelect">
-                                                        <option>- Select One -</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- /form-group -->
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="inputMultiple">Multiple</label>
-                                                <div class="col-sm-10">
-                                                    <select class="form-control" id="inputMultiple" multiple>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
-                                            </div><!-- /form-group -->
-                                           <!-- /form-group -->
-                                            <div class="form-group">
+                            <!-- app content here cuadro de bugs-->
+                             <div class="panel panel-default magic-element">
+                                    <div class="panel-heading">
+                                        <ul class="nav nav-pills">
+                                            <li class="active">
+                                                <a href="#recent-orders" data-toggle="tab">Por Resolver</a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a href="#recent-comments" data-toggle="tab">Historial</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- tab-content -->
+                                    <div class="tab-content list-group">
+                                        <div class="tab-pane fade in active" id="recent-orders">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Direrencias de consumo de materiales</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Pedro Paramo</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 2Hrs</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="resolver" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 145 </h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dr. Hugo Lopez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 3 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="resolver" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                         </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 453</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dra. Celina Chavez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 22 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="resolver" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane recent order -->
+
+                                        <!-- group recent posts -->
+                                        <div class="tab-pane fade" id="recent-posts">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Pedido 345</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Dr. Felipe Diaz</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 30 Minutos</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Sexy UI Kits, so hard?</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Jupainah</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>3 hours ago</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <h3 class="media-heading">Make Your Design Keep Simple and Easy Read</h3>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Layla Smith</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>22 hours ago</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="edit" class="btn btn-default"><i class="icon ion-edit"></i></a>
+                                                            <a href="#" title="draf" class="btn btn-default"><i class="icon ion-filing"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane recent post -->
+
+                                        <!-- group recent comments -->
+                                        <div class="tab-pane fade" id="recent-comments">
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, debitis, distinctio, eveniet quia at minima incidunt officia unde blanditiis delectus dolore nulla voluptatum nisi aspernatur rem labore deserunt porro nostrum.
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Juan Perez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 16 Minutos</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, perferendis, odit, quae fuga omnis sit maiores veritatis modi rerum quis est mollitia labore accusantium. Culpa, eos aliquam cum neque hic.
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Ramon Martinez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 3 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+
+                                            <li class="list-group-item">
+                                                <div class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object media-object-circle" src="assets/app/img/brand-md.png" alt="">
+                                                    </a><!-- /media-object -->
+                                                    <div class="media-body">
+                                                        <div>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, eius, sed, repudiandae quos nulla voluptatum a quas eligendi eos at maxime numquam placeat voluptates perspiciatis debitis. Laudantium fugiat nam in?
+                                                        </div>
+                                                        <div class="text-bold text-muted">
+                                                            <i class="icon ion-person"></i>
+                                                            <small>Celina Gomez</small>
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <i class="icon ion-ios7-clock-outline"></i>
+                                                            <small>Hace 22 Horas</small>
+                                                        </div>
+                                                    </div><!-- /media-body -->
+                                                    <div class="list-actions auto-hide">
+                                                        <div class="btn-group btn-group-xs">
+                                                            <a href="#" title="approve" class="btn btn-default"><i class="icon ion-checkmark"></i></a>
+                                                            <a href="#" title="replay" class="btn btn-default"><i class="icon ion-reply"></i></a>
+                                                            <a href="#" title="spam" class="btn btn-default"><i class="icon ion-alert"></i></a>
+                                                            <a href="#" title="delete" class="btn btn-default"><i class="icon ion-close"></i></a>
+                                                        </div><!-- /btn-group -->
+                                                    </div><!-- /list-actions -->
+                                                </div><!-- /media -->
+                                            </li><!-- /list-group-item -->
+                                        </div><!-- /tab-pane -->
+                                    </div><!-- /list-group tab-content -->
+                                </div><!-- /panel recent reports -->
+                            </div>
                                                 
-                                                <div class="col-sm-10">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" name="checkboxes" value="1"> He revisado completamente todos los componentes
-                                                        </label>
-                                                    </div>
-                                                   
-                                                </div>
-                                            </div><!-- /form-group -->
-                                           
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label">Estado del paquete resivido</label>
-                                                <div class="col-sm-10">
-                                                    <div class="radio">
-                                                        <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                            abierto
-                                                        </label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label>
-                                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                           Sellado
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div><!-- /form-group -->
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label" for="inputTextarea">Observaciones</label>
-                                                <div class="col-sm-10">
-                                                    <textarea rows="3" class="form-control" id="inputTextarea"></textarea>
-                                                </div>
-                                            </div><!-- /form-group -->
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-2 col-sm-10">
-                                                    <button type="submit" class="btn btn-default">Cancelar</button>
-                                                    <button type="submit" class="btn btn-default">Almacenar</button>
-                                                    <button type="submit" class="btn btn-primary">Esterilizar</button>
-                                                </div>
-                                            </div><!-- /form-group -->
-                                        </fieldset><!-- /fieldset -->
-                                    </form><!-- /form -->
-                                </div><!-- /box -->
-
-                             
-                                <div class="box magic-element">
-                                    <h2 class="box-heading">DateTime picker</h2>
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker1'>
-                                                <input type='text' class="form-control" data-format="YYYY/MM/DD" />
-                                                <span class="input-group-addon">
-                                                    <span class="icon ion-ios7-calendar-outline"></span>
-                                                </span>
-                                            </div>
-                                        </div><!-- /form-group -->
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker2'>
-                                                <input type='text' class="form-control" placeholder="Disable the date picker" />
-                                                <span class="input-group-addon">
-                                                    <span class="icon ion-ios7-calendar-outline"></span>
-                                                </span>
-                                            </div>
-                                        </div><!-- /form-group -->
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker3'>
-                                                <input type='text' class="form-control" data-format="YYYY-MM-DD" placeholder="Disable the time picker" />
-                                                <span class="input-group-addon">
-                                                    <span class="icon ion-ios7-calendar-outline"></span>
-                                                </span>
-                                            </div>
-                                        </div><!-- /form-group -->
-                                     </form><!-- /form -->
-                                </div><!-- /box -->
-
-                               
                                
     </section><!-- /wrapper -->
 
